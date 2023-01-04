@@ -19,37 +19,41 @@
 <div>
     <h3>Editar</h3>
     <div class="edit">
-        <form>
+        <form (ngSubmit)="salvar()" [formGroup]="form">
             <div class="form-group">
-              <label for="exampleInputEmail1">Cidade</label>
-              <input type="string" class="form-control" id="city"  placeholder="cidade">
+              <label >Cidade</label>
+              <input formControlName="cidade" type="string" class="form-control" id="city"  placeholder="cidade">
             </div>
             <div class="form-group">
-              <label for="exampleInputEmail1">Estado</label>
-              <input type="string" class="form-control" id="state"  placeholder="Estado">
+              <label >Estado</label>
+              <input formControlName="estado" type="string" class="form-control" id="state"  placeholder="Estado">
             </div>
             <div class="form-group">
-              <label for="exampleInputEmail1">País</label>
-              <input type="string" class="form-control" id="country"  placeholder="País">
+              <label >País</label>
+              <input formControlName="pais" type="string" class="form-control" id="country"  placeholder="País">
             </div>
             <div class="form-group">
-              <label for="exampleInputEmail1">Endereço do imóvel</label>
-              <input type="string" class="form-control" id="street" aria-describedby="emailHelp" placeholder="Seu endererço">
+              <label >Endereço do imóvel</label>
+              <input formControlName="endereco" type="string" class="form-control" id="street" aria-describedby="emailHelp" placeholder="Seu endererço">
             </div>
             <div class="form-group">
-              <label for="exampleInputEmail1">cep</label>
-              <input type="cep" class="form-control" id="name2" placeholder="cep">
+              <label >cep</label>
+              <input formControlName="cep" type="cep" class="form-control" id="name2" placeholder="cep">
             </div>
             <div class="form-group">
-              <label for="exampleInputPassword1">Área do imóvel</label>
-              <input type="string" class="form-control" id="exampleInputPassword3" placeholder="Área">
+              <label>Área do imóvel</label>
+              <input formControlName="area" type="string" class="form-control" id="exampleInputPassword3" placeholder="Área">
             </div>
             <div class="form-group">
-              <label for="exampleInputPassword1">Valor do imóvel</label>
-              <input type="string" class="form-control" id="exampleInputPassword3" placeholder="Valor">
+              <label>Valor do imóvel</label>
+              <input formControlName="valor" type="string" class="form-control" id="exampleInputPassword3" placeholder="Valor">
             </div>
             <div class="form-group">
-              <label for="exampleInputPassword1">Imagens do imóvel</label>
+              <label>telefone</label>
+              <input formControlName="contato" type="string" class="form-control" id="exampleInputPassword3" placeholder="Valor">
+            </div>
+            <div class="form-group">
+              <label>Imagens do imóvel</label>
               <input #imageInput type="file" accept="image/*" class="form-control" id="exampleInputPassword3" placeholder="Valor">
             </div>
             <button type="submit" class="btn btn-primary">salvar</button>
