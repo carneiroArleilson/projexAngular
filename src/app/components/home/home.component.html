@@ -1,0 +1,34 @@
+<style>
+    h3{
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+    }
+    .edit{
+        margin-left: 15%;
+        padding-left: 5%;
+        width: 60%;
+    }
+</style>
+<app-header></app-header>
+<app-nav></app-nav>
+<div>
+    <h3>Editar</h3>
+    <div class="edit">
+        <form (ngSubmit)="salvar()" [formGroup]="form">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Endereço de email</label>
+              <input formControlName="email" type="email" class="form-control" id="exampleInputEmail3" aria-describedby="emailHelp" placeholder="Seu email">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Nome completo</label>
+              <input formControlName="name" type="email" class="form-control" id="name2" aria-describedby="emailHelp" placeholder="Seu nome">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Senha</label>
+              <input formControlName="senha" type="password" class="form-control" id="exampleInputPassword3" placeholder="Senha">
+            </div>
+            <button type="submit" class="btn btn-primary">salvar</button>
+          </form>
+    </div>
+</div>

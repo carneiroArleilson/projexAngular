@@ -1,0 +1,27 @@
+<style>
+    .nav{
+        background-color: #19A1AD;
+        width: 15%;
+        height: 100%;
+        display: flex;
+        flex-direction:  column;
+        justify-content: center;
+        position: absolute;
+    }
+    button:hover{
+        cursor: pointer;
+    }
+    button{
+        color:white;
+        font-weight: 600;
+        background-color: transparent;
+        border:none;
+        justify-content: flex-start;
+    }
+</style>
+
+<div class="nav">
+    <button routerLink="/home"><h4>Editar usuário</h4></button>
+    <button routerLink="/imovel"><h4>Cadastrar imóvel</h4></button>
+    <button routerLink="/dashboard"><h4>Dashboard</h4></button>
+</div>
