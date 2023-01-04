@@ -8,7 +8,6 @@ import { HomeComponent } from './components/home/home.component';
 import { NavComponent } from './components/nav/nav.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ImovelComponent } from './components/imovel/imovel.component';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -20,7 +19,6 @@ import { HttpClientModule } from '@angular/common/http';
     NavComponent,
     HeaderComponent,
     ImovelComponent,
-    DashboardComponent
   ],
   imports: [
     BrowserModule,

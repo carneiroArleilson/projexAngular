@@ -41,7 +41,6 @@ export class ImovelComponent {
       valor: this.form.value.valor})
     .subscribe(
       token => this.tokenService.setToken(token),
-      // token => console.log({token}),
       error => {
         console.log(error);
         

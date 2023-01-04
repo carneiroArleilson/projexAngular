@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import {HttpClient} from "@angular/common/http";
 import {Router} from "@angular/router";
@@ -27,13 +27,12 @@ export class LoguinComponent implements OnInit {
     this.http.post<any>(`http://localhost:3000/loguin/entrar`, {email: this.form.value.loguin, senha: this.form.value.senha})
     .subscribe(
       token => this.tokenService.setToken(token),
-      // token => console.log({token}),
       error => {
         console.log(error);
         
       }
     );
     const token = JSON.parse(String(this.tokenService.getToken()))
-    token.sucess && this.router.navigate(['home'])
+    token.sucess ? this.router.navigate(['home']) : alert('email ou senha invalidos!')
    };
 }
