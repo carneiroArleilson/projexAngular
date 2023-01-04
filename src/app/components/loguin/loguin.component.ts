@@ -17,6 +17,12 @@ export class LoguinComponent implements OnInit {
     loguin: new FormControl(''),
     senha: new FormControl(''),
   });
+
+  formcadastro: FormGroup = new FormGroup({
+    email: new FormControl(''),
+    nome: new FormControl(''),
+    senha: new FormControl(''),
+  });
   @Output() submitEM = new EventEmitter();
 
   ngOnInit(): void {
@@ -34,5 +40,18 @@ export class LoguinComponent implements OnInit {
     );
     const token = JSON.parse(String(this.tokenService.getToken()))
     token.sucess ? this.router.navigate(['home']) : alert('email ou senha invalidos!')
+   };
+
+   async cadastro (){
+    console.log('formcadastro:', this.formcadastro)
+    this.http.post<any>(`http://localhost:3000/user`, {email: this.formcadastro.value.email, senha: this.formcadastro.value.senha, nome: this.formcadastro.value.nome})
+    .subscribe(
+      token => console.log({token})
+      ,
+      error => {
+        console.log(error);
+        
+      }
+    );
    };
 }
